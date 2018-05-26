@@ -1,5 +1,4 @@
-Introduction to Udemy Apache Spark 2.0 with Scala - Hands On with Big Data!
-===========================================================================
+# Introduction to Udemy Apache Spark 2.0 with Scala - Hands On with Big Data!
 
 ## About this course
 
