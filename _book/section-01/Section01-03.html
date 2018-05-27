@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1. Warning about Java 9 and Spark2.3! · GitBook</title>
+        <title>3. [Activity] Create a Histogram of Real Movie Ratings with Spark! · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Section01-02.html" />
     
-    
-    <link rel="prev" href="../" />
+    <link rel="prev" href="Section01-02.html" />
     
 
     </head>
@@ -111,7 +109,7 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="Section01-01.html">
+        <li class="chapter " data-level="2.1" data-path="Section01-01.html">
             
                 <a href="Section01-01.html">
             
@@ -137,7 +135,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="Section01-03.html">
+        <li class="chapter active" data-level="2.3" data-path="Section01-03.html">
             
                 <a href="Section01-03.html">
             
@@ -180,7 +178,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1. Warning about Java 9 and Spark2.3!</a>
+        <a href=".." >3. [Activity] Create a Histogram of Real Movie Ratings with Spark!</a>
     </h1>
 </div>
 
@@ -195,12 +193,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="1-warning-about-java-9-and-spark-23">1. Warning about Java 9 and Spark 2.3!</h1>
-<h2 id="important-setup-note">IMPORTANT SETUP NOTE</h2>
-<p>You&apos;re about to install Apache Spark, a powerful technology for analyzing big data!</p>
-<p>When you&apos;re installing a Java Development Kit (JDK) for Spark, do not install Java 9. Scroll down a little and install the JDK for Java 8 instead.</p>
-<p>Java 9 just came out recently, and Spark is not yet compatible with it. </p>
-<p>Also when downloading Apache Spark itself, download the latest Spark 2.2 package. Do not install Spark 2.3 or newer - one of the third party libraries we use in this course is only compatible up to Spark 2.2.</p>
+                                <h1 id="3-activity-create-a-histogram-of-real-movie-ratings-with-spark">3. [Activity] Create a Histogram of Real Movie Ratings with Spark!</h1>
+<h3 id="download-the-required-files-for-sparkscala">Download the required files for SparkScala</h3>
+<ul>
+<li>Create a folder called SparkScala on your (C:/) so as to store your files of the course content</li>
+<li>Go to <a href="grouplens.org">grouplens.org</a></li>
+<li>Click on the datasets tab, and choose MovieLens 100K Dataset, ml-100kzip to download</li>
+<li>Extract and copy ml-100k folder with all the files inside to the SparkScala folder you created</li>
+<li>Download the <a href="http://media.sundog-soft.com/SparkScala/SparkScala.zip" target="_blank">SparkScala.zip</a> from Sundog Website</li>
+<li>Extract the files from SparkScala.zip and remember where you store all of these data, as it contains all the source files for this course</li>
+</ul>
+<h3 id="importing-sparkscala-files-into-scala-eclipse-ide">Importing SparkScala files into Scala Eclipse IDE</h3>
+<ul>
+<li>Open and input C:/SparkScala for select a workspace for Scala IDE</li>
+<li>Create a new Scala project for the course</li>
+<li>Name it SparkScalaCourse and click finish</li>
+<li>Right click the project and click create, new Package</li>
+<li>Name the package<pre><code>  com.sundogsoftware.spark
+</code></pre></li>
+<li>Click the finish button</li>
+<li>Right click on the package and click import</li>
+<li>Navigate to General/File System/</li>
+<li>Choose where you have put the SparkScala Folder sources (For me, I put under this directory)<pre><code>  C:\Users\User\Desktop\Alvin Programming Files\Data Science Courses\Apache 2.0 Spark with Scala\SparkScala)
+</code></pre></li>
+<li>Check RatingsCounter.scala</li>
+<li>Double click on RatingsCounter.scala</li>
+<li>You can see all the codes under that file, and there will be alot of missing dependencies</li>
+<li>To resolve that, right click SparkScalaCourse project and select properties</li>
+<li>Go to Java build path and select add external JARs</li>
+<li>Navigate to (C:/spark/jars) and CTRL-a and select all the spark JARS to be added to Scala Spark IDE</li>
+<li>There might be errors displaying that spark JARS were under Scala version 2.11 which is different from my current Scala version of 2.13</li>
+<li>To fix that, right click on the project and go to properties, and go to Scala Compiler</li>
+<li>Check use Project Settings, and select the Fixed Version Scala built in version of your Scala IDE (For me its Scala version 2.11.11)</li>
+<li>After that, all Scala version related errors should disappear</li>
+</ul>
+<h3 id="creating-and-running-a-scala-spark-application">Creating and Running a Scala Spark Application</h3>
+<ul>
+<li>Click on run, and go to Run Configurations</li>
+<li>Click on Scala Applications, and input this for main class<pre><code>  com.sundogsoftware.spark.RatingsCounter
+</code></pre></li>
+<li>Click run and it should work</li>
+<li>The console should now show the output for the count for the ratings 1 to 5</li>
+</ul>
 
                                 
                                 </section>
@@ -228,14 +262,10 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="Section01-02.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2. Introduction, and Getting Set Up">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Section01-02.html" class="navigation navigation-next " aria-label="Next page: 2. Introduction, and Getting Set Up">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -244,7 +274,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1. Warning about Java 9 and Spark2.3!","level":"2.1","depth":1,"next":{"title":"2. Introduction, and Getting Set Up","level":"2.2","depth":1,"path":"section-01/Section01-02.md","ref":"section-01/Section01-02.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-01/Section01-01.md","mtime":"2018-05-26T13:41:29.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-27T10:48:02.984Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3. [Activity] Create a Histogram of Real Movie Ratings with Spark!","level":"2.3","depth":1,"previous":{"title":"2. Introduction, and Getting Set Up","level":"2.2","depth":1,"path":"section-01/Section01-02.md","ref":"section-01/Section01-02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Section-01/Section01-03.md","mtime":"2018-05-27T10:47:58.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-27T10:48:02.984Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

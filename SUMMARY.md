@@ -8,3 +8,4 @@
 
 * [1. Warning about Java 9 and Spark2.3!](section-01/Section01-01.md)
 * [2. Introduction, and Getting Set Up](section-01/Section01-02.md)
+* [3. [Activity] Create a Histogram of Real Movie Ratings with Spark!](Section-01/Section01-03.md)
