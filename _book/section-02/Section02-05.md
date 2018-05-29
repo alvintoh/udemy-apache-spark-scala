@@ -34,7 +34,7 @@
 * You can use >, <, and == to compare across val
 * Scala you can use == to compare across two strings to see if both are the same string "Picard" == "Picard"
 
-### EXERCISE
+### Exercise
 ```
 	// Write some code that takes the value of pi, doubles it, and then prints it within a string with
 	// three decimal places of precision to the right.

@@ -2,7 +2,7 @@
 
 ## SCALA CRASH COURSE
 
-### WHAT IS SCALA?
+### What is Scala?
 * Yet another programming language!
  * It's what Spark is built with
  * New featuress are often Scala-first.
@@ -15,8 +15,8 @@
 
 * Functional programming
 
-### ADMINSTRATIVE NOTE
-* The instructor will attach sample code to each lecture on platformrs that support it
+### Adminstrative Note
+* The instructor will attach sample code to each lecture on platforms that support it
 * But you downloaded these same files in lesson 2 - you can import them from whereever you saved them instead if you want.
 
 ### Activity
