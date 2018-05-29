@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1. Warning about Java 9 and Spark2.3! · GitBook</title>
+        <title>4. [Activity] Scala Basics, Part 1 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Section01-02.html" />
+    <link rel="next" href="Section02-05.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="../Section-01/Section01-03.html" />
     
 
     </head>
@@ -111,9 +111,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="Section01-01.html">
+        <li class="chapter " data-level="2.1" data-path="../section-01/Section01-01.html">
             
-                <a href="Section01-01.html">
+                <a href="../section-01/Section01-01.html">
             
                     
                     1. Warning about Java 9 and Spark2.3!
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="Section01-02.html">
+        <li class="chapter " data-level="2.2" data-path="../section-01/Section01-02.html">
             
-                <a href="Section01-02.html">
+                <a href="../section-01/Section01-02.html">
             
                     
                     2. Introduction, and Getting Set Up
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="Section01-03.html">
+        <li class="chapter " data-level="2.3" data-path="../Section-01/Section01-03.html">
             
-                <a href="Section01-03.html">
+                <a href="../Section-01/Section01-03.html">
             
                     
                     3. [Activity] Create a Histogram of Real Movie Ratings with Spark!
@@ -157,9 +157,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../section-02/Section02-04.html">
+        <li class="chapter active" data-level="3.1" data-path="Section02-04.html">
             
-                <a href="../section-02/Section02-04.html">
+                <a href="Section02-04.html">
             
                     
                     4. [Activity] Scala Basics, Part 1
@@ -170,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../section-02/Section02-05.html">
+        <li class="chapter " data-level="3.2" data-path="Section02-05.html">
             
-                <a href="../section-02/Section02-05.html">
+                <a href="Section02-05.html">
             
                     
                     5. [Exercise] Scala Basics, Part 2
@@ -213,7 +213,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1. Warning about Java 9 and Spark2.3!</a>
+        <a href=".." >4. [Activity] Scala Basics, Part 1</a>
     </h1>
 </div>
 
@@ -228,12 +228,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="1-warning-about-java-9-and-spark-23">1. Warning about Java 9 and Spark 2.3!</h1>
-<h2 id="important-setup-note">IMPORTANT SETUP NOTE</h2>
-<p>You&apos;re about to install Apache Spark, a powerful technology for analyzing big data!</p>
-<p>When you&apos;re installing a Java Development Kit (JDK) for Spark, do not install Java 9. Scroll down a little and install the JDK for Java 8 instead.</p>
-<p>Java 9 just came out recently, and Spark is not yet compatible with it. </p>
-<p>Also when downloading Apache Spark itself, download the latest Spark 2.2 package. Do not install Spark 2.3 or newer - one of the third party libraries we use in this course is only compatible up to Spark 2.2.</p>
+                                <h1 id="4-activity-scala-basics-part-1">4. [Activity] Scala Basics, Part 1</h1>
+<h2 id="scala-crash-course">SCALA CRASH COURSE</h2>
+<h3 id="what-is-scala">WHAT IS SCALA?</h3>
+<ul>
+<li>Yet another programming language!<ul>
+<li>It&apos;s what Spark is built with</li>
+<li>New featuress are often Scala-first.</li>
+<li>You can also program Spark with Python or Java</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Runs on top of the Java virtual machine<ul>
+<li>Can access Java classes</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Functional programming</li>
+</ul>
+<h3 id="adminstrative-note">ADMINSTRATIVE NOTE</h3>
+<ul>
+<li>The instructor will attach sample code to each lecture on platformrs that support it</li>
+<li>But you downloaded these same files in lesson 2 - you can import them from whereever you saved them instead if you want.</li>
+</ul>
+<h3 id="activity">Activity</h3>
+<ul>
+<li>Go to the resources folder and download LearningScala1.sc</li>
+<li>Open Eclipse-Scala IDE and create a new Scala Project called LearningScala</li>
+<li>Right click on LearningScala Project, and import the file LearningScala1.sc from the file location you have download the source resource of SparkScala</li>
+<li>Double click on LearningScala1.sc and you should see the scala code written in the file</li>
+<li>Scala can implicitly figure out the type for its val</li>
+</ul>
 
                                 
                                 </section>
@@ -261,12 +288,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="../Section-01/Section01-03.html" class="navigation navigation-prev " aria-label="Previous page: 3. [Activity] Create a Histogram of Real Movie Ratings with Spark!">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Section01-02.html" class="navigation navigation-next " aria-label="Next page: 2. Introduction, and Getting Set Up">
+                <a href="Section02-05.html" class="navigation navigation-next " aria-label="Next page: 5. [Exercise] Scala Basics, Part 2">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -277,7 +304,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1. Warning about Java 9 and Spark2.3!","level":"2.1","depth":1,"next":{"title":"2. Introduction, and Getting Set Up","level":"2.2","depth":1,"path":"section-01/Section01-02.md","ref":"section-01/Section01-02.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-01/Section01-01.md","mtime":"2018-05-29T08:08:27.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-29T09:46:05.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4. [Activity] Scala Basics, Part 1","level":"3.1","depth":1,"next":{"title":"5. [Exercise] Scala Basics, Part 2","level":"3.2","depth":1,"path":"section-02/Section02-05.md","ref":"section-02/Section02-05.md","articles":[]},"previous":{"title":"3. [Activity] Create a Histogram of Real Movie Ratings with Spark!","level":"2.3","depth":1,"path":"Section-01/Section01-03.md","ref":"Section-01/Section01-03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-04.md","mtime":"2018-05-29T09:14:16.371Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-29T09:46:05.360Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
