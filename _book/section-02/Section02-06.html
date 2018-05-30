@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>5. [Exercise] Scala Basics, Part 2 · GitBook</title>
+        <title>6. [Exercise] Flow Control in Scala · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Section02-06.html" />
+    <link rel="next" href="Section02-07.html" />
     
     
-    <link rel="prev" href="Section02-04.html" />
+    <link rel="prev" href="Section02-05.html" />
     
 
     </head>
@@ -170,7 +170,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="Section02-05.html">
+        <li class="chapter " data-level="3.2" data-path="Section02-05.html">
             
                 <a href="Section02-05.html">
             
@@ -183,7 +183,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="Section02-06.html">
+        <li class="chapter active" data-level="3.3" data-path="Section02-06.html">
             
                 <a href="Section02-06.html">
             
@@ -239,7 +239,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >5. [Exercise] Scala Basics, Part 2</a>
+        <a href=".." >6. [Exercise] Flow Control in Scala</a>
     </h1>
 </div>
 
@@ -254,45 +254,130 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="5-exercise-scala-basics-part-2">5. [Exercise] Scala Basics, Part 2</h1>
+                                <h1 id="6-exercise-flow-control-in-scala">6. [Exercise] Flow Control in Scala</h1>
 <h3 id="activity">Activity</h3>
 <ul>
-<li>When you look at the file LearningScala1.sc</li>
-<li><p>The syntax for Scala allows you to set printf which is formatting</p>
-<pre><code>  // printf style:
+<li>For this activity, go ahead and import from the resource the file LearningScala2.scala</li>
+<li>For Scala, we can control the flow of code</li>
+<li>For example, if and else control flow in 1 line using Functional Programming</li>
+<li><p>You can also use if and else condition with {} syntax</p>
+<pre><code>  // Flow control
 
-  println(f&quot;Pi is about $piSinglePrecision%.3f&quot;)
-  //&gt; Pi is about 3.142
+  // If / else syntax
+  if (1 &gt; 3) println(&quot;Impossible!&quot;) else println(&quot;The world makes sense.&quot;)
+  //&gt; The world makes sense.
 
-  println(f&quot;Zero padding on the left: $numberOne%05d&quot;)
-  //&gt; Zero padding on the left: 00001
+  if (1 &gt; 3) {
+      println(&quot;Impossible!&quot;)
+    } else {
+        println(&quot;The world makes sense.&quot;)
+    }
 </code></pre></li>
-<li><p>Scala allows you to subsitite variables with s prefix</p>
-<pre><code>  // Substiting in variables
+<li><p>You can also use case match for certain cases</p>
+<pre><code>  // Matching - like switch in other languages:
 
-  println(s&quot;I can use s prefix to ue variable like $numberOne $truth $letterA&quot;)
-  //&gt; I can use the s prefix to use variables like 1 true a
-</code></pre></li>
-<li><p>Scala allows you to substitute expressions with curly brackets</p>
-<pre><code>  // Substituting expressions (with curly brackets):
+    val number = 3                               
+  //&gt; number  : Int = 3
 
-  println(s&quot;The s prefix isn&apos;t limited to variables; I can include any expression. Like ${1+2}&quot;)
-  //&gt; The s prefix isn&apos;t limited to variables; I can include any expression. Like 3
+  number match {
+        case 1 =&gt; println(&quot;One&quot;)
+        case 2 =&gt; println(&quot;Two&quot;)
+        case 3 =&gt; println(&quot;Three&quot;)
+        case _ =&gt; println(&quot;Something else&quot;)
+   }
+   //&gt; Three
 </code></pre></li>
-<li><p>Scala can also use regular expression</p>
-</li>
-<li>Dealing with booleans</li>
-<li>You can use &gt;, &lt;, and == to compare across val</li>
-<li>Scala you can use == to compare across two strings to see if both are the same string &quot;Picard&quot; == &quot;Picard&quot;</li>
+<li><p>This is the syntax for For Loop in Scala</p>
+<pre><code>  // For loops
+  for (x &lt;- 1 to 4) {
+      val squared = x * x
+      println(squared)
+  }                                         
+  //&gt; 1
+  //| 4                                              
+  //| 9                                              
+  //| 16
+</code></pre></li>
+<li><p>This is the syntax for While Loop in Scala</p>
+<pre><code>  // While loops
+
+  var x = 10                                      
+  //&gt; x  : Int = 10
+
+  while (x &gt;= 0) {
+      println(x)
+      x -= 1
+  }                                             
+  //&gt; 10
+  //| 9                                              
+  //| 8                                              
+  //| 7                                              
+  //| 6                                              
+  //| 5                                              
+  //| 4                                              
+  //| 3                                              
+  //| 2                                              
+  //| 1                                              
+  //| 0
+</code></pre></li>
+<li><p>This is the syntax for Do While Loop in Scala in 1 line using Functional Programming</p>
+<pre><code>  // Do While Loop
+  x = 0
+  //&gt; 0
+
+  do { println(x); x+=1 } while (x &lt;= 10)
+  //| 1
+  //| 2
+  //| 3
+  //| 4
+  //| 5
+  //| 6
+  //| 7
+  //| 8
+  //| 9
+  //| 10
+</code></pre></li>
+<li><p>In Scala, you can print the result returned by the expression, even while not assigning any val to it</p>
+<pre><code>  // Expressions
+
+  // &quot;Returns&quot; the final value in a block automatically
+  {val x = 10; x + 20}                           
+  //&gt; res0: Int = 30
+
+  println({val x = 10; x + 20})            
+  //&gt; 30
+</code></pre></li>
 </ul>
 <h3 id="exercise">Exercise</h3>
 <pre><code>    // EXERCISE
-    // Write some code that takes the value of pi, doubles it, and then prints it within a string with
-    // three decimal places of precision to the right.
-    // Just write your code below here; any time you save the file it will automatically display the results!
+    // Write some code that prints out the first 10 values of the Fibonacci sequence.
+    // This is the sequence where every number is the sum of the two numbers before it.
+    // So, the result should be 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 
-    val newPi = pi * 2
-    println(f&quot;This is the new Pi: $newPi%.3f&quot;)
+    var prevVal = 0                          
+    //&gt; prevVal  : Int = 0
+    var prevPrevVal = 1                      
+    //&gt; prevPrevVal  : Int = 1
+    var i = 0                                
+    //&gt; i  : Int = 0
+
+    do{
+        println(prevVal)
+        val sum = prevPrevVal + prevVal
+        prevPrevVal = prevVal
+        prevVal = sum
+        i += 1
+     } while (i &lt; 10)                         
+    //&gt; 0
+    //| 1
+    //| 1
+    //| 2
+    //| 3
+    //| 5
+    //| 8
+    //| 13
+    //| 21
+    //| 34
 </code></pre>
                                 
                                 </section>
@@ -320,12 +405,12 @@
 
             
                 
-                <a href="Section02-04.html" class="navigation navigation-prev " aria-label="Previous page: 4. [Activity] Scala Basics, Part 1">
+                <a href="Section02-05.html" class="navigation navigation-prev " aria-label="Previous page: 5. [Exercise] Scala Basics, Part 2">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Section02-06.html" class="navigation navigation-next " aria-label="Next page: 6. [Exercise] Flow Control in Scala">
+                <a href="Section02-07.html" class="navigation navigation-next " aria-label="Next page: 7. [Exercise] Functions in Scala">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -336,7 +421,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5. [Exercise] Scala Basics, Part 2","level":"3.2","depth":1,"next":{"title":"6. [Exercise] Flow Control in Scala","level":"3.3","depth":1,"path":"section-02/Section02-06.md","ref":"section-02/Section02-06.md","articles":[]},"previous":{"title":"4. [Activity] Scala Basics, Part 1","level":"3.1","depth":1,"path":"section-02/Section02-04.md","ref":"section-02/Section02-04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-05.md","mtime":"2018-05-30T08:11:04.012Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T13:00:49.302Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6. [Exercise] Flow Control in Scala","level":"3.3","depth":1,"next":{"title":"7. [Exercise] Functions in Scala","level":"3.4","depth":1,"path":"section-02/Section02-07.md","ref":"section-02/Section02-07.md","articles":[]},"previous":{"title":"5. [Exercise] Scala Basics, Part 2","level":"3.2","depth":1,"path":"section-02/Section02-05.md","ref":"section-02/Section02-05.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-06.md","mtime":"2018-05-30T08:12:47.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T13:00:49.302Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

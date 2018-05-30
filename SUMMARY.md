@@ -14,3 +14,5 @@
 
 * [4. [Activity] Scala Basics, Part 1](section-02/Section02-04.md)
 * [5. [Exercise] Scala Basics, Part 2](section-02/Section02-05.md)
+* [6. [Exercise] Flow Control in Scala](section-02/Section02-06.md)
+* [7. [Exercise] Functions in Scala](section-02/Section02-07.md)

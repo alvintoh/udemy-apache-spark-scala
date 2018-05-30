@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>5. [Exercise] Scala Basics, Part 2 · GitBook</title>
+        <title>7. [Exercise] Functions in Scala · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Section02-06.html" />
     
-    
-    <link rel="prev" href="Section02-04.html" />
+    <link rel="prev" href="Section02-06.html" />
     
 
     </head>
@@ -170,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="Section02-05.html">
+        <li class="chapter " data-level="3.2" data-path="Section02-05.html">
             
                 <a href="Section02-05.html">
             
@@ -196,7 +194,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="Section02-07.html">
+        <li class="chapter active" data-level="3.4" data-path="Section02-07.html">
             
                 <a href="Section02-07.html">
             
@@ -239,7 +237,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >5. [Exercise] Scala Basics, Part 2</a>
+        <a href=".." >7. [Exercise] Functions in Scala</a>
     </h1>
 </div>
 
@@ -254,45 +252,85 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="5-exercise-scala-basics-part-2">5. [Exercise] Scala Basics, Part 2</h1>
+                                <h1 id="7-exercise-functions-in-scala">7. [Exercise] Functions in Scala</h1>
 <h3 id="activity">Activity</h3>
 <ul>
-<li>When you look at the file LearningScala1.sc</li>
-<li><p>The syntax for Scala allows you to set printf which is formatting</p>
-<pre><code>  // printf style:
+<li>For this activity, go ahead and import from the resource the file LearningScala3.scala</li>
+<li>LearningScala3.scala mainly talks about the building blocks of Functional Programming for Scala Code</li>
+<li>The follow defines how to define a function in Scala</li>
+<li>Scala do not need to explicitly declare a return statement to return the value</li>
+<li><p>Scala will return the last value found in the function scope</p>
+<pre><code>  // Functions
 
-  println(f&quot;Pi is about $piSinglePrecision%.3f&quot;)
-  //&gt; Pi is about 3.142
+  // Format is def &lt;function name&gt;(parameter name: type...) : return type = { expression }
+  // Don&apos;t forget the = before the expression!
+  def squareIt(x: Int) : Int = {
+      x * x
+  }                                               
+  //&gt; squareIt: (x: Int)Int
 
-  println(f&quot;Zero padding on the left: $numberOne%05d&quot;)
-  //&gt; Zero padding on the left: 00001
+  def cubeIt(x: Int): Int = {x * x * x}           
+  //&gt; cubeIt: (x: Int)Int
+
+  println(squareIt(2))                            
+  //&gt; 4
+
+  println(cubeIt(2))                              
+  //&gt; 8
 </code></pre></li>
-<li><p>Scala allows you to subsitite variables with s prefix</p>
-<pre><code>  // Substiting in variables
-
-  println(s&quot;I can use s prefix to ue variable like $numberOne $truth $letterA&quot;)
-  //&gt; I can use the s prefix to use variables like 1 true a
-</code></pre></li>
-<li><p>Scala allows you to substitute expressions with curly brackets</p>
-<pre><code>  // Substituting expressions (with curly brackets):
-
-  println(s&quot;The s prefix isn&apos;t limited to variables; I can include any expression. Like ${1+2}&quot;)
-  //&gt; The s prefix isn&apos;t limited to variables; I can include any expression. Like 3
-</code></pre></li>
-<li><p>Scala can also use regular expression</p>
+<li><p>Scala can take in other functions as parameter for its current Function parameter</p>
 </li>
-<li>Dealing with booleans</li>
-<li>You can use &gt;, &lt;, and == to compare across val</li>
-<li>Scala you can use == to compare across two strings to see if both are the same string &quot;Picard&quot; == &quot;Picard&quot;</li>
+<li><p>Need to declare =&gt; as the other function to transform to this current method return value</p>
+<pre><code>  // Functions can take other functions as parameters
+
+  def transformInt(x: Int, f: Int =&gt; Int) : Int = {
+      f(x)
+  }                                               
+  //&gt; transformInt: (x: Int, f: Int =&gt; Int)Int
+
+  val result = transformInt(2, cubeIt)            
+  //&gt; result  : Int = 8
+
+  println (result)                                
+  //&gt; 8
+</code></pre></li>
+<li><p>You can declare Lambda functions in Scala without even explicitly giving them a name</p>
+<pre><code>  // &quot;Lambda functions&quot;, &quot;anonymous functions&quot;, &quot;function literals&quot;
+  // You can declare functions inline without even giving them a name
+  // This happens a lot in Spark.
+  transformInt(3, x =&gt; x * x * x)                 //&gt; res0: Int = 27
+
+  transformInt(10, x =&gt; x / 2)                    //&gt; res1: Int = 5
+
+  transformInt(2, x =&gt; {val y = x * 2; y * y})    //&gt; res2: Int = 16
+</code></pre></li>
 </ul>
 <h3 id="exercise">Exercise</h3>
 <pre><code>    // EXERCISE
-    // Write some code that takes the value of pi, doubles it, and then prints it within a string with
-    // three decimal places of precision to the right.
-    // Just write your code below here; any time you save the file it will automatically display the results!
+    // Strings have a built-in .toUpperCase method. For example, &quot;foo&quot;.toUpperCase gives you back FOO.
+    // Write a function that converts a string to upper-case, and use that function of a few test strings.
+    // Then, do the same thing using a function literal instead of a separate, named function.
 
-    val newPi = pi * 2
-    println(f&quot;This is the new Pi: $newPi%.3f&quot;)
+    def transform(str: String) : String = {str.toUpperCase}
+    //&gt; transform: (str: String)String
+
+    transform(&quot;testing1&quot;)                           
+    //&gt; res3: String = TESTING1
+    transform(&quot;testing2&quot;)                           
+    //&gt; res4: String = TESTING2
+    transform(&quot;testing3&quot;)                           
+    //&gt; res5: String = TESTING3
+
+    def transformString(str: String, functionTesting: String =&gt; String) : String = {
+        functionTesting(str)
+    }                                               
+    //&gt; transformString: (str: String, functionTesting: String =&gt; String)String
+
+    transformString(&quot;testing4&quot;, transform)   
+    //&gt; res6: String = TESTING4
+
+    transformString(&quot;testingliteral&quot;, x =&gt; x.toUpperCase)
+    //&gt; res7: String = TESTINGLITERAL
 </code></pre>
                                 
                                 </section>
@@ -320,14 +358,10 @@
 
             
                 
-                <a href="Section02-04.html" class="navigation navigation-prev " aria-label="Previous page: 4. [Activity] Scala Basics, Part 1">
+                <a href="Section02-06.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 6. [Exercise] Flow Control in Scala">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Section02-06.html" class="navigation navigation-next " aria-label="Next page: 6. [Exercise] Flow Control in Scala">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -336,7 +370,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5. [Exercise] Scala Basics, Part 2","level":"3.2","depth":1,"next":{"title":"6. [Exercise] Flow Control in Scala","level":"3.3","depth":1,"path":"section-02/Section02-06.md","ref":"section-02/Section02-06.md","articles":[]},"previous":{"title":"4. [Activity] Scala Basics, Part 1","level":"3.1","depth":1,"path":"section-02/Section02-04.md","ref":"section-02/Section02-04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-05.md","mtime":"2018-05-30T08:11:04.012Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T13:00:49.302Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7. [Exercise] Functions in Scala","level":"3.4","depth":1,"previous":{"title":"6. [Exercise] Flow Control in Scala","level":"3.3","depth":1,"path":"section-02/Section02-06.md","ref":"section-02/Section02-06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-07.md","mtime":"2018-05-30T12:58:58.824Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T13:00:49.302Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
