@@ -2,7 +2,7 @@
 
 ## SCALA CRASH COURSE
 
-### What is Scala?
+### What Is Scala?
 * Yet another programming language!
  * It's what Spark is built with
  * New featuress are often Scala-first.

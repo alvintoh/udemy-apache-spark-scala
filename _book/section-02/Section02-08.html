@@ -1,0 +1,588 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8. [Exercise] Data Structures in Scala · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../section-03/Section03-09.html" />
+    
+    
+    <link rel="prev" href="Section02-07.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 1: Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../section-01/Section01-01.html">
+            
+                <a href="../section-01/Section01-01.html">
+            
+                    
+                    1. Warning about Java 9 and Spark2.3!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../section-01/Section01-02.html">
+            
+                <a href="../section-01/Section01-02.html">
+            
+                    
+                    2. Introduction, and Getting Set Up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Section-01/Section01-03.html">
+            
+                <a href="../Section-01/Section01-03.html">
+            
+                    
+                    3. [Activity] Create a Histogram of Real Movie Ratings with Spark!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 2: Scala Crash Course</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Section02-04.html">
+            
+                <a href="Section02-04.html">
+            
+                    
+                    4. [Activity] Scala Basics, Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Section02-05.html">
+            
+                <a href="Section02-05.html">
+            
+                    
+                    5. [Exercise] Scala Basics, Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Section02-06.html">
+            
+                <a href="Section02-06.html">
+            
+                    
+                    6. [Exercise] Flow Control in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Section02-07.html">
+            
+                <a href="Section02-07.html">
+            
+                    
+                    7. [Exercise] Functions in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="Section02-08.html">
+            
+                <a href="Section02-08.html">
+            
+                    
+                    8. [Exercise] Data Structures in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 3: Spark Basics and Simple Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../section-03/Section03-09.html">
+            
+                <a href="../section-03/Section03-09.html">
+            
+                    
+                    9. Introduction to Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../section-03/Section03-10.html">
+            
+                <a href="../section-03/Section03-10.html">
+            
+                    
+                    10. Introducing RDD's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../section-03/Section03-11.html">
+            
+                <a href="../section-03/Section03-11.html">
+            
+                    
+                    11. Ratings Histogram Walkthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../section-03/Section03-12.html">
+            
+                <a href="../section-03/Section03-12.html">
+            
+                    
+                    12. Spark Internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8. [Exercise] Data Structures in Scala</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="8-exercise-data-structures-in-scala">8. [Exercise] Data Structures in Scala</h1>
+<h3 id="activity">Activity</h3>
+<ul>
+<li>For this activity, go ahead and import from the resource the file LearningScala4.scala</li>
+<li>Scala contains Tuples which are immutable lists</li>
+<li><p>Tuples can be used for database fields or passing entire rows of data</p>
+<pre><code>  // Data structures
+  // Tuples (Also really common with Spark!!)
+  // Immutable lists
+  // Often thought of as database fields, or columns.
+  // Useful for passing around entire rows of data.
+
+  val captainStuff = (&quot;Picard&quot;, &quot;Enterprise-D&quot;, &quot;NCC-1701-D&quot;)
+  //&gt; captainStuff  : (String, String, String) = (Picard,Enterprise-D,NCC-1701-D)
+
+  println(captainStuff)                           
+  //&gt; (Picard,Enterprise-D,NCC-1701-D)
+
+    // You refer to individual fields with their ONE-BASED index:
+    println(captainStuff._1)                        
+    //&gt; Picard
+    println(captainStuff._2)                        
+    //&gt; Enterprise-D
+    println(captainStuff._3)                        
+    //&gt; NCC-1701-D
+</code></pre></li>
+<li><p>You can create key/value with -&gt; and also mixing diffeent type in a tuple</p>
+<pre><code>  // You can create a key/value pair with -&gt;
+
+  val picardsShip = &quot;Picard&quot; -&gt; &quot;Enterprise-D&quot;
+  //&gt; picardsShip  : (String, String) = (Picard,Enterprise-D)
+  println(picardsShip._2)                          
+  //&gt; Enterprise-D
+
+  // You can mix different types in a tuple
+
+  val aBunchOfStuff = (&quot;Kirk&quot;, 1964, true)         
+  //&gt; aBunchOfStuff  : (String, Int, Boolean) = (Kirk,1964,true)
+</code></pre></li>
+<li><p>You can create a List in Scala which holds more functionality than a tuple</p>
+<pre><code>  // Lists
+  // Like a tuple, but it&apos;s an actual Collection object that has more functionality.
+  // Also, it cannot hold items of different types.
+  // It&apos;s a singly-linked list under the hood.
+
+  val shipList = List(&quot;Enterprise&quot;, &quot;Defiant&quot;, &quot;Voyager&quot;, &quot;Deep Space Nine&quot;)
+  //&gt; shipList  : List[String] = List(Enterprise, Defiant, Voyager, Deep Space Nine)
+
+  // Access individual members using () with ZERO-BASED index (confused yet?)
+  println(shipList(1))                             
+  //&gt; Defiant
+
+  // head and tail give you the first item, and the remaining ones.
+  println(shipList.head)                           
+  //&gt; Enterprise
+  println(shipList.tail)                           
+  //&gt; List(Defiant, Voyager, Deep Space Nine)
+
+  // Iterating though a list
+  for (ship &lt;- shipList) {println(ship)}           
+  //&gt; Enterprise
+  //| Defiant
+  //| Voyager
+  //| Deep Space Nine
+</code></pre></li>
+<li><p>You can also apply function literal to a list in Scala</p>
+<pre><code>  // Let&apos;s apply a function literal to a list! map() can be used to apply any function to every item in a collection.
+
+  val backwardShips = shipList.map( (ship: String) =&gt; {ship.reverse})
+  //&gt; backwardShips  : List[String] = List(esirpretnE, tnaifeD, regayoV, eniN ecapS peeD)
+
+  for (ship &lt;- backwardShips) {println(ship)}      
+  //&gt; esirpretnE
+  //| tnaifeD
+  //| regayoV
+  //| eniN ecapS peeD
+
+  // reduce() can be used to combine together all the items in a collection using some function.
+  val numberList = List(1, 2, 3, 4, 5)              
+  //&gt; numberList  : List[Int] = List(1, 2, 3, 4, 5)
+
+  val sum = numberList.reduce( (x: Int, y: Int) =&gt; x + y)
+  //&gt; sum  : Int = 15
+  println(sum)                                      
+  //&gt; 15
+
+  // filter() can remove stuff you don&apos;t want. Here we&apos;ll introduce wildcard syntax while we&apos;re at it.
+  val iHateFives = numberList.filter( (x: Int) =&gt; x != 5)
+  //&gt; iHateFives  : List[Int] = List(1, 2, 3, 4)
+
+  val iHateThrees = numberList.filter(_ != 3)       
+  //&gt; iHateThrees  : List[Int] = List(1, 2, 4, 5)
+</code></pre></li>
+<li><p>You can use more functions with Lists in Scala</p>
+<pre><code>  // Note that Spark has its own map, reduce, and filter functions that can distribute these operations. But they work the same way!
+  // Also, you understand MapReduce now :)
+
+  // Concatenating lists
+  val moreNumbers = List(6, 7, 8)                   
+  //&gt; moreNumbers  : List[Int] = List(6, 7, 8)
+
+  val lotsOfNumbers = numberList ++ moreNumbers     
+  //&gt; lotsOfNumbers  : List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8)
+
+  // More list fun
+  val reversed = numberList.reverse                 
+  //&gt; reversed  : List[Int] = List(5, 4, 3, 2, 1)
+
+  val sorted = reversed.sorted                      
+  //&gt; sorted  : List[Int] = List(1, 2, 3, 4, 5)
+
+  val lotsOfDuplicates = numberList ++ numberList   
+  //&gt; lotsOfDuplicates  : List[Int] = List(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
+
+  val distinctValues = lotsOfDuplicates.distinct    
+  //&gt; distinctValues  : List[Int] = List(1, 2, 3, 4, 5)
+
+  val maxValue = numberList.max                     
+  //&gt; maxValue  : Int = 5
+
+  val total = numberList.sum                        
+  //&gt; total  : Int = 15
+
+  val hasThree = iHateThrees.contains(3)            
+  //&gt; hasThree  : Boolean = false
+</code></pre></li>
+<li><p>You can also use Maps in Scala</p>
+<pre><code>  // Maps
+  // Useful for key/value lookups on distinct keys
+  // Like dictionaries in other languages
+
+  val shipMap = Map(&quot;Kirk&quot; -&gt; &quot;Enterprise&quot;, &quot;Picard&quot; -&gt; &quot;Enterprise-D&quot;, &quot;Sisko&quot; -&gt; &quot;Deep Space Nine&quot;, &quot;Janeway&quot; -&gt; &quot;Voyager&quot;)
+  //&gt; shipMap  : scala.collection.immutable.Map[String,String] = Map(Kirk -&gt; Enterprise, 
+  //| Picard -&gt; Enterprise-D, Sisko -&gt; Deep Space Nine, Janeway -&gt; Voyager)
+
+  println(shipMap(&quot;Janeway&quot;))                       
+  //&gt; Voyager
+
+  // Dealing with missing keys
+  println(shipMap.contains(&quot;Archer&quot;))               
+  //&gt; false
+
+  val archersShip = util.Try(shipMap(&quot;Archer&quot;)) getOrElse &quot;Unknown&quot;
+  //&gt; archersShip  : String = Unknown
+
+  println(archersShip)                              
+  //&gt; Unknown
+</code></pre></li>
+</ul>
+<h3 id="exercise">Exercise</h3>
+<pre><code>    // EXERCISE
+    // Create a list of the numbers 1-20; your job is to print out numbers that are evenly divisible by three. (Scala&apos;s
+    // modula operator, like other languages, is %, which gives you the remainder after division. For example, 9 % 3 = 0
+    // because 9 is evenly divisible by 3.) Do this first by iterating through all the items in the list and testing each
+    // one as you go. Then, do it again by using a filter function on the list instead.
+
+    // That&apos;s enough for now!
+    // There is MUCH more to learn about Scala. We didn&apos;t cover many other collection types, including mutable collections.
+    // And we didn&apos;t even touch on object-oriented Scala. The book &quot;Learning Scala&quot; from O&apos;Reilly is great if you want to
+    // go into more depth - but you&apos;ve got enough to get through this course for now.
+
+    val numbersList = List(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+    //&gt; numbersList  : List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+
+    for (currentNumber &lt;- numbersList) {if(currentNumber % 3 == 0){println(currentNumber)}}
+    //&gt; 3
+    //| 6
+    //| 9
+    //| 12
+    //| 15
+    //| 18
+
+    val filteredList = numbersList.filter(_ %3 == 0)  
+    //&gt; filteredList  : List[Int] = List(3, 6, 9, 12, 15, 18)
+    println(filteredList)                             
+    //&gt; List(3, 6, 9, 12, 15, 18)
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Section02-07.html" class="navigation navigation-prev " aria-label="Previous page: 7. [Exercise] Functions in Scala">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../section-03/Section03-09.html" class="navigation navigation-next " aria-label="Next page: 9. Introduction to Spark">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8. [Exercise] Data Structures in Scala","level":"3.5","depth":1,"next":{"title":"9. Introduction to Spark","level":"4.1","depth":1,"path":"section-03/Section03-09.md","ref":"section-03/Section03-09.md","articles":[]},"previous":{"title":"7. [Exercise] Functions in Scala","level":"3.4","depth":1,"path":"section-02/Section02-07.md","ref":"section-02/Section02-07.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-08.md","mtime":"2018-05-31T08:33:33.566Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-31T12:03:50.321Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

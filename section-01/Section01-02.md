@@ -2,7 +2,7 @@
 
 ## GETTING SET UP (Install Java, Spark, Scala, Eclipse)
 
-### Install a Java Development Kit(JDK)
+### Install A Java Development Kit(JDK)
 * From [oracle.com](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * Accept the default configurations
 
@@ -27,7 +27,7 @@
 * Copy winutils.exe into C:/winutils/bin
 
 
-### Set up SPARK_HOME JAVA_HOME and PATH environment variables
+### Set Up SPARK_HOME JAVA_HOME And PATH environment Variables
 * Setting up the Windows environment, right click on the windows icon on the left hand corner and go into Control Panel
 * Click on Systems and Security, then onto System and then Advanced system settings. Click on Environment Variables
 * Click on New under User Variables for User
@@ -76,5 +76,5 @@
 * To exit just hit Ctrl-D
 
 
-### Detailed, written steps at [SunDog Website](http://sundog-education.com/spark-scala)
+### Detailed, Written Steps At [SunDog Website](http://sundog-education.com/spark-scala)
 
