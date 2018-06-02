@@ -12,5 +12,5 @@
 * The first exercise is finding out the maximum temperatures instead of minimum.
 * The file MaxTemperatures.scala is included in this folder for your reference
 
-* The second exercise is actually finding out what date has the most precipitation and create a script based modifying MaxTemperatures.scala
+* The second exercise is actually finding out what date has the most precipitation and create a script based on modifying MaxTemperatures.scala
 * The file MaxPrecipitation.scala is included in this folder for your reference
