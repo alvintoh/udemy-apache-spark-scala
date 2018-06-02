@@ -24,3 +24,7 @@
 * [10. Introducing RDD's](section-03/Section03-10.md)
 * [11. Ratings Histogram Walkthrough](section-03/Section03-11.md)
 * [12. Spark Internals](section-03/Section03-12.md)
+* [13. Key /Value RDD's, and the Average Friends by Age example](section-03/Section03-13.md)
+* [14. [Activity] Running the Average Friends by Age Example](section-03/Section03-14.md)
+* [15. Filtering RDD's, and the Minimum Temperature by Location Example](section-03/Section03-15.md)
+* [16. [Activity] Running the Minimum Temperature Example, and Modifying it for Maximum](section-03/Section03-16.md)

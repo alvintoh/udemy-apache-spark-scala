@@ -8,7 +8,6 @@
 * Download the [SparkScala.zip](http://media.sundog-soft.com/SparkScala/SparkScala.zip) from Sundog Website
 * Extract the files from SparkScala.zip and remember where you store all of these data, as it contains all the source files for this course
 
-
 ### Importing SparkScala files into Scala Eclipse IDE
 * Open and input C:/SparkScala for select a workspace for Scala IDE
 * Create a new Scala project for the course

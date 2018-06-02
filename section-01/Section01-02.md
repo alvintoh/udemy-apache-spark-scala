@@ -6,7 +6,6 @@
 * From [oracle.com](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * Accept the default configurations
 
-
 ### Install Spark (pre-built)
 * From [spark.apache.org](https://spark.apache.org/downloads.html)
 * Choose a Spark release later than or equal to 2.0.0
@@ -25,7 +24,6 @@
 * Install [winutils.exe](http://media.sundog-soft.com/SparkScala/winutils.exe) and HADOOP_HOME
 * Create a new folder call winutils, and create a new folder called bin in (C:) drive
 * Copy winutils.exe into C:/winutils/bin
-
 
 ### Set Up SPARK_HOME JAVA_HOME And PATH environment Variables
 * Setting up the Windows environment, right click on the windows icon on the left hand corner and go into Control Panel
@@ -50,7 +48,6 @@
 ```
 * Press okay for all of the settings
 
-
 ### Install Scala IDE (bundled with Eclipse)
 * From [scala-ide.org](http://scala-ide.org/)
 * Extract and copy the eclipse folder to a new folder eclipse in (C:/)
@@ -74,7 +71,6 @@
 	rdd.count()
 ```
 * To exit just hit Ctrl-D
-
 
 ### Detailed, Written Steps At [SunDog Website](http://sundog-education.com/spark-scala)
 
