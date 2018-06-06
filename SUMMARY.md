@@ -34,3 +34,10 @@
 * [20. [Exercise] Find the Total Amount Spent by Customer](section-03/Section03-20.md)
 * [21. [Exercise] Check your Results, and Sort Them by Total Amount Spent](section-03/Section03-21.md)
 * [22. Check Your Results and Implementation Against Mine](section-03/Section03-22.md)
+
+## Section 4: Advanced Examples of Spark Programs
+
+* [23. [Activity] Find the Most Popular Movie](section-04/Section04-23.md)
+* [24. [Activity] Use Broadcast Variables to Display Movie Names](section-04/Section04-24.md)
+* [25. [Activity] Find the Most Popular Superhero in a Social Graph](section-04/Section04-25.md)
+* [26. Superhero Degrees of Seperation: Introducing Breadth-First Search](section-04/Section04-26.md)

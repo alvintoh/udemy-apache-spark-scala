@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1. Warning about Java 9 and Spark2.3! · GitBook</title>
+        <title>25. [Activity] Find the Most Popular Superhero in a Social Graph · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Section01-02.html" />
+    <link rel="next" href="Section04-26.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="Section04-24.html" />
     
 
     </head>
@@ -111,9 +111,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="Section01-01.html">
+        <li class="chapter " data-level="2.1" data-path="../section-01/Section01-01.html">
             
-                <a href="Section01-01.html">
+                <a href="../section-01/Section01-01.html">
             
                     
                     1. Warning about Java 9 and Spark2.3!
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="Section01-02.html">
+        <li class="chapter " data-level="2.2" data-path="../section-01/Section01-02.html">
             
-                <a href="Section01-02.html">
+                <a href="../section-01/Section01-02.html">
             
                     
                     2. Introduction, and Getting Set Up
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="Section01-03.html">
+        <li class="chapter " data-level="2.3" data-path="../Section-01/Section01-03.html">
             
-                <a href="Section01-03.html">
+                <a href="../Section-01/Section01-03.html">
             
                     
                     3. [Activity] Create a Histogram of Real Movie Ratings with Spark!
@@ -418,9 +418,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../section-04/Section04-23.html">
+        <li class="chapter " data-level="5.1" data-path="Section04-23.html">
             
-                <a href="../section-04/Section04-23.html">
+                <a href="Section04-23.html">
             
                     
                     23. [Activity] Find the Most Popular Movie
@@ -431,9 +431,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../section-04/Section04-24.html">
+        <li class="chapter " data-level="5.2" data-path="Section04-24.html">
             
-                <a href="../section-04/Section04-24.html">
+                <a href="Section04-24.html">
             
                     
                     24. [Activity] Use Broadcast Variables to Display Movie Names
@@ -444,9 +444,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../section-04/Section04-25.html">
+        <li class="chapter active" data-level="5.3" data-path="Section04-25.html">
             
-                <a href="../section-04/Section04-25.html">
+                <a href="Section04-25.html">
             
                     
                     25. [Activity] Find the Most Popular Superhero in a Social Graph
@@ -457,9 +457,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="../section-04/Section04-26.html">
+        <li class="chapter " data-level="5.4" data-path="Section04-26.html">
             
-                <a href="../section-04/Section04-26.html">
+                <a href="Section04-26.html">
             
                     
                     26. Superhero Degrees of Seperation: Introducing Breadth-First Search
@@ -500,7 +500,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1. Warning about Java 9 and Spark2.3!</a>
+        <a href=".." >25. [Activity] Find the Most Popular Superhero in a Social Graph</a>
     </h1>
 </div>
 
@@ -515,12 +515,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="1-warning-about-java-9-and-spark-23">1. Warning about Java 9 and Spark 2.3!</h1>
-<h2 id="important-setup-note">IMPORTANT SETUP NOTE</h2>
-<p>You&apos;re about to install Apache Spark, a powerful technology for analyzing big data!</p>
-<p>When you&apos;re installing a Java Development Kit (JDK) for Spark, do not install Java 9. Scroll down a little and install the JDK for Java 8 instead.</p>
-<p>Java 9 just came out recently, and Spark is not yet compatible with it. </p>
-<p>Also when downloading Apache Spark itself, download the latest Spark 2.2 package. Do not install Spark 2.3 or newer - one of the third party libraries we use in this course is only compatible up to Spark 2.2.</p>
+                                <h1 id="25-activity-find-the-most-popular-superhero-in-a-social-graph">25. [Activity] Find the Most Popular Superhero in a Social Graph</h1>
+<h2 id="most-popular-superhero">MOST POPULAR SUPERHERO</h2>
+<h3 id="superhero-social-networks">Superhero Social Networks</h3>
+<ul>
+<li>So if a superhero appears with another superhero, these 2 superheros might be friends, so we can represent that relationship on a graph</li>
+</ul>
+<h3 id="input-data-format">Input Data Format</h3>
+<ul>
+<li>Marvel-graph.txt contains the superhero id and their association to different superheros on a line</li>
+<li>Marvel-graph.txt:<pre><code>  4397 2237 1767 472 4997 5931 6235 1478 1369 806 3994 6232
+  3519 4704 2460 763 1602 5306 5358 6121 6160 2459 3173 4963 6166
+  3518 5409
+</code></pre></li>
+<li><p>A hero may span multiple lines</p>
+</li>
+<li><p>Marvel-names.txt contains the superhero id, their superhero name and real life name delimited by a space</p>
+</li>
+<li>Marvel-names.txt:<pre><code>  5300 &quot;SPENCERTRACY&quot;
+  5301 &quot;SPERZEL, ANTON&quot;
+  5302 &quot;SPETSBURO, GEN.YURI&quot;
+  5303 &quot;SPHINX&quot;
+  5304 &quot;SPHINX II&quot;
+  5305 &quot;SPHINX III&quot;
+  5306 &quot;SPIDER-MAN/PETER PAR&quot;
+  5307 &quot;SPIDER-MAN III/MARTH&quot;
+  5308 &quot;SPIDER-MAN CLONE/BEN&quot;
+  5309 &quot;SPIDER-WOMAN/JESSICA&quot;
+</code></pre></li>
+</ul>
+<h3 id="most-popular-superhero-strategy">Most Popular Superhero: Strategy</h3>
+<ul>
+<li>Map input data to (heroID, number of co-occurences) per line</li>
+<li>Add up co-occurence by heroID using reduceByKey()</li>
+<li>Flip (map) RDD to (number, heroID) so we can...</li>
+<li>Use max() on the RDD to find the hero with the most co-occurences</li>
+<li>Look up the name of the winner and display the result</li>
+</ul>
+<h3 id="off-to-the-code">Off To The Code...</h3>
+<ul>
+<li>Import MostPopularSuperhero.scala from resource folder into Eclipse-Scala IDE in SparkScala folder</li>
+<li>Import Marvel-graph.txt and Marvel-names.txt from the resource folder into SparkScala folder to be used as the source file for MostPopularSuperhero.scala</li>
+<li>The delimiter used for parseNames function is &apos;\&quot;&apos;&apos; is a quotation mark</li>
+<li>countCoOccurences function is used to count the total number of other superhero occurences mapped to a key of the superhero id</li>
+<li>Run the file and you should see the superhero with the most friends</li>
+</ul>
+<h3 id="and-the-winner-is">And The Winner Is...</h3>
+<ul>
+<li>CAPTAIN AMERICA is the most popular superhero with 1933 co-appearances.</li>
+</ul>
+<h3 id="exercise">Exercise</h3>
+<ul>
+<li>Now you can fiddle around with this code and find out what is the top ten most popular superhero and the top ten least popular superhero</li>
+<li>I have included my code topTenSuperHeroes.scala inside this folder to find out the top ten superheroes with the most and least friends</li>
+</ul>
 
                                 
                                 </section>
@@ -548,12 +596,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="Section04-24.html" class="navigation navigation-prev " aria-label="Previous page: 24. [Activity] Use Broadcast Variables to Display Movie Names">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Section01-02.html" class="navigation navigation-next " aria-label="Next page: 2. Introduction, and Getting Set Up">
+                <a href="Section04-26.html" class="navigation navigation-next " aria-label="Next page: 26. Superhero Degrees of Seperation: Introducing Breadth-First Search">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -564,7 +612,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1. Warning about Java 9 and Spark2.3!","level":"2.1","depth":1,"next":{"title":"2. Introduction, and Getting Set Up","level":"2.2","depth":1,"path":"section-01/Section01-02.md","ref":"section-01/Section01-02.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-01/Section01-01.md","mtime":"2018-05-29T09:52:35.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T14:18:05.063Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"25. [Activity] Find the Most Popular Superhero in a Social Graph","level":"5.3","depth":1,"next":{"title":"26. Superhero Degrees of Seperation: Introducing Breadth-First Search","level":"5.4","depth":1,"path":"section-04/Section04-26.md","ref":"section-04/Section04-26.md","articles":[]},"previous":{"title":"24. [Activity] Use Broadcast Variables to Display Movie Names","level":"5.2","depth":1,"path":"section-04/Section04-24.md","ref":"section-04/Section04-24.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-04/Section04-25.md","mtime":"2018-06-06T14:09:56.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T14:18:05.063Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
