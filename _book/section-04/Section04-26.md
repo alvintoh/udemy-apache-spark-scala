@@ -1,6 +1,6 @@
 # 26. Superhero Degrees of Seperation: Introducing Breadth-First Search
 
-## SUPERHERO DEGREES OF SERPERATION
+## SUPERHERO DEGREES OF SEPERATION
 An iteratve Breadth-First-Search implementation in Spark, and introducing accumulators
 
 ### Degrees Of Seperation: Breadth-First Search

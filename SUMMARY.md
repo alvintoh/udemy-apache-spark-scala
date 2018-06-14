@@ -41,3 +41,8 @@
 * [24. [Activity] Use Broadcast Variables to Display Movie Names](section-04/Section04-24.md)
 * [25. [Activity] Find the Most Popular Superhero in a Social Graph](section-04/Section04-25.md)
 * [26. Superhero Degrees of Seperation: Introducing Breadth-First Search](section-04/Section04-26.md)
+* [27. Superhero Degrees of Seperation: Accumulators, and Implementing BFS in Spark](section-04/Section04-27.md)
+* [28. Superhero Degrees of Seperation: Review the code, and run it!](section-04/Section04-28.md)
+* [29. Item-Based Collaborative Filtering in Spark, cache(), and persist()](section-04/Section04-29.md)
+* [30. [Activity] Running the Similiar Movies Script using Spark's Cluster Manager](section-04/Section04-30.md)
+* [31. [Exercise] Improve the Quality of Similiar Movies](section-04/Section04-31.md)
