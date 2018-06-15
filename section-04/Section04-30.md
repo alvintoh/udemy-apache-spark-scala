@@ -166,7 +166,7 @@
 * We can use the settings as default
 * We can export the JAR to our SparkScalaCourse Folder with the File name: MovieSims.jar
 * Just press finish to export MovieSims.jar to the destinaton folder
-* Open cmd and Run in Administrative Mode and cd to the folder containing MovieSims.jar
+* Open cmd and run as Administrator and cd to the folder containing MovieSims.jar
 ```
 	cd C:\SparkScala\SparkScalaCourse
 ```

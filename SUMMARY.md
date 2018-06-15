@@ -46,3 +46,7 @@
 * [29. Item-Based Collaborative Filtering in Spark, cache(), and persist()](section-04/Section04-29.md)
 * [30. [Activity] Running the Similiar Movies Script using Spark's Cluster Manager](section-04/Section04-30.md)
 * [31. [Exercise] Improve the Quality of Similiar Movies](section-04/Section04-31.md)
+
+## Section 5: Running Spark on a Cluster
+* [32. [Activity] Using spark-submit to run Spark driver scripts](section-05/Section05-32.md)
+* [33. [Activity] Packaging driver scripts with SBT](section-05/Section05-33.md)

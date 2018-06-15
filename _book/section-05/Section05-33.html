@@ -1,0 +1,834 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>33. [Activity] Packaging driver scripts with SBT · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Section05-32.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 1: Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../section-01/Section01-01.html">
+            
+                <a href="../section-01/Section01-01.html">
+            
+                    
+                    1. Warning about Java 9 and Spark2.3!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../section-01/Section01-02.html">
+            
+                <a href="../section-01/Section01-02.html">
+            
+                    
+                    2. Introduction, and Getting Set Up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Section-01/Section01-03.html">
+            
+                <a href="../Section-01/Section01-03.html">
+            
+                    
+                    3. [Activity] Create a Histogram of Real Movie Ratings with Spark!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 2: Scala Crash Course</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../section-02/Section02-04.html">
+            
+                <a href="../section-02/Section02-04.html">
+            
+                    
+                    4. [Activity] Scala Basics, Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../section-02/Section02-05.html">
+            
+                <a href="../section-02/Section02-05.html">
+            
+                    
+                    5. [Exercise] Scala Basics, Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../section-02/Section02-06.html">
+            
+                <a href="../section-02/Section02-06.html">
+            
+                    
+                    6. [Exercise] Flow Control in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../section-02/Section02-07.html">
+            
+                <a href="../section-02/Section02-07.html">
+            
+                    
+                    7. [Exercise] Functions in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../section-02/Section02-08.html">
+            
+                <a href="../section-02/Section02-08.html">
+            
+                    
+                    8. [Exercise] Data Structures in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 3: Spark Basics and Simple Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../section-03/Section03-09.html">
+            
+                <a href="../section-03/Section03-09.html">
+            
+                    
+                    9. Introduction to Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../section-03/Section03-10.html">
+            
+                <a href="../section-03/Section03-10.html">
+            
+                    
+                    10. Introducing RDD's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../section-03/Section03-11.html">
+            
+                <a href="../section-03/Section03-11.html">
+            
+                    
+                    11. Ratings Histogram Walkthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../section-03/Section03-12.html">
+            
+                <a href="../section-03/Section03-12.html">
+            
+                    
+                    12. Spark Internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../section-03/Section03-13.html">
+            
+                <a href="../section-03/Section03-13.html">
+            
+                    
+                    13. Key /Value RDD's, and the Average Friends by Age example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../section-03/Section03-14.html">
+            
+                <a href="../section-03/Section03-14.html">
+            
+                    
+                    14. [Activity] Running the Average Friends by Age Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../section-03/Section03-15.html">
+            
+                <a href="../section-03/Section03-15.html">
+            
+                    
+                    15. Filtering RDD's, and the Minimum Temperature by Location Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../section-03/Section03-16.html">
+            
+                <a href="../section-03/Section03-16.html">
+            
+                    
+                    16. [Activity] Running the Minimum Temperature Example, and Modifying it for Maximum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../section-03/Section03-17.html">
+            
+                <a href="../section-03/Section03-17.html">
+            
+                    
+                    17. [Activity] Counting Word Occurences using Flatmap()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../section-03/Section03-18.html">
+            
+                <a href="../section-03/Section03-18.html">
+            
+                    
+                    18. [Activity] Improving the Word Count Script with Regular Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../section-03/Section03-19.html">
+            
+                <a href="../section-03/Section03-19.html">
+            
+                    
+                    19. [Activity] Sorting the Word Count Results
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../section-03/Section03-20.html">
+            
+                <a href="../section-03/Section03-20.html">
+            
+                    
+                    20. [Exercise] Find the Total Amount Spent by Customer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="../section-03/Section03-21.html">
+            
+                <a href="../section-03/Section03-21.html">
+            
+                    
+                    21. [Exercise] Check your Results, and Sort Them by Total Amount Spent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.14" data-path="../section-03/Section03-22.html">
+            
+                <a href="../section-03/Section03-22.html">
+            
+                    
+                    22. Check Your Results and Implementation Against Mine
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 4: Advanced Examples of Spark Programs</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../section-04/Section04-23.html">
+            
+                <a href="../section-04/Section04-23.html">
+            
+                    
+                    23. [Activity] Find the Most Popular Movie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../section-04/Section04-24.html">
+            
+                <a href="../section-04/Section04-24.html">
+            
+                    
+                    24. [Activity] Use Broadcast Variables to Display Movie Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../section-04/Section04-25.html">
+            
+                <a href="../section-04/Section04-25.html">
+            
+                    
+                    25. [Activity] Find the Most Popular Superhero in a Social Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../section-04/Section04-26.html">
+            
+                <a href="../section-04/Section04-26.html">
+            
+                    
+                    26. Superhero Degrees of Seperation: Introducing Breadth-First Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../section-04/Section04-27.html">
+            
+                <a href="../section-04/Section04-27.html">
+            
+                    
+                    27. Superhero Degrees of Seperation: Accumulators, and Implementing BFS in Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../section-04/Section04-28.html">
+            
+                <a href="../section-04/Section04-28.html">
+            
+                    
+                    28. Superhero Degrees of Seperation: Review the code, and run it!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="../section-04/Section04-29.html">
+            
+                <a href="../section-04/Section04-29.html">
+            
+                    
+                    29. Item-Based Collaborative Filtering in Spark, cache(), and persist()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="../section-04/Section04-30.html">
+            
+                <a href="../section-04/Section04-30.html">
+            
+                    
+                    30. [Activity] Running the Similiar Movies Script using Spark's Cluster Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="../section-04/Section04-31.html">
+            
+                <a href="../section-04/Section04-31.html">
+            
+                    
+                    31. [Exercise] Improve the Quality of Similiar Movies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 5: Running Spark on a Cluster</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="Section05-32.html">
+            
+                <a href="Section05-32.html">
+            
+                    
+                    32. [Activity] Using spark-submit to run Spark driver scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.2" data-path="Section05-33.html">
+            
+                <a href="Section05-33.html">
+            
+                    
+                    33. [Activity] Packaging driver scripts with SBT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >33. [Activity] Packaging driver scripts with SBT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="33-activity-packaging-driver-scripts-with-sbt">33. [Activity] Packaging driver scripts with SBT</h1>
+<h2 id="packaging-with-sbt">PACKAGING WITH SBT</h2>
+<h3 id="what-is-sbt">What is SBT</h3>
+<ul>
+<li>Like Maven for Scala</li>
+<li>Manages your library dependency tree for you</li>
+<li>Can package up all of your dependencies into a self-contained JAR</li>
+<li>If you have many dependencies (or depend on a library that in turn has lots of dependencies), it makes life a lot easier than passing a ton of -jars options</li>
+<li>Get it from scala-sbt.org</li>
+</ul>
+<h3 id="using-sbt">Using SBT</h3>
+<ul>
+<li>Set up a directory structure like this:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Dir Structure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">src</td>
+<td style="text-align:center">project</td>
+</tr>
+<tr>
+<td style="text-align:center">main</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">scala</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Your Scala source files go in the source folder</li>
+<li>In your project folder, create an assembly.sbt file that contains one line:<pre><code>  addSbtPlugin(&quot;com.eed3si9n&quot; % &quot;sbt-assembly&quot; % &quot;0.14.3&quot;)
+</code></pre></li>
+<li>Check the latest sbt documentation as this will change over time. This works with sbt 0.13.11</li>
+</ul>
+<h3 id="creating-an-sbt-build-file">Creating An SBT Build File</h3>
+<ul>
+<li>At the root (alongside the src and project directories) create a build.sbt file</li>
+<li><p>Example:</p>
+<pre><code>  name := &quot;PopularMovies&quot;
+
+  version := &quot;1.0&quot;
+
+  organization := &quot;com.sundogsoftware&quot;
+
+  scalaVersion := &quot;2.10.6&quot;
+
+  libraryDependecies ++= Seq(
+  &quot;org.apache.spark&quot; %% &quot;spark-core&quot; % &quot;1.6.1&quot; % &quot;provided&quot;
+  )
+</code></pre></li>
+</ul>
+<h3 id="adding-dependencies">Adding Dependencies</h3>
+<ul>
+<li>Say for example you need to depend on Kafka, which isn&apos;t built into Spark. You could add<pre><code>  &quot;org.apache.spark&quot; %% &quot;spark-streaming-kafka&quot; % &quot;1.6.1&quot;,
+</code></pre></li>
+<li><p>to your library dependencies, and sbt will automatically fetch it and everything it needs and bundle it into your JAR file.</p>
+</li>
+<li><p>Make sure you use the correct Spark version number, and note that I did NOT use &quot;provided&quot; on the line.</p>
+</li>
+</ul>
+<h3 id="bundling-it-up">Bundling It Up</h3>
+<ul>
+<li>Just run:<pre><code>  sbt assembly
+</code></pre></li>
+<li><p>...from the root folder, and it does its magic</p>
+</li>
+<li><p>You &apos;ll find the JAR in target/scala-2.10 (or whatever Scala version you&apos;re building against.)</p>
+</li>
+</ul>
+<h3 id="heres-the-cool-thing">Here&apos;s The Cool Thing</h3>
+<ul>
+<li>This JAR is self-contained! Just use spark-submit <code>&lt;jar file&gt;</code> and it&apos;ll run, even without specifying a class!</li>
+<li>Let&apos;s try it out.</li>
+</ul>
+<h3 id="activity">Activity</h3>
+<ul>
+<li>Go to <a href="https://www.scala-sbt.org" target="_blank">SBT</a> and navigate to the Download Tab to download the Windows version and install it</li>
+<li>You can also go to <a href="https://grouplens.org/datasets/movielens/" target="_blank">MovieLens</a> and click on the 1M Dataset and click README.TXT to understand that dataset</li>
+<li>You can import MovieSimilarities1M.scala from the source folder into your Spark-Eclipse IDE into your project folder SparkScalaCourse</li>
+<li>Open and see some of the differences of delimiters and way in parsing the data</li>
+</ul>
+<pre><code>    val data = sc.textFile(&quot;s3n://sundog-spark/ml-1m/ratings.dat&quot;)
+</code></pre><ul>
+<li>The ratings.dat file is instead loaded from a cloud Amazon s3 storage</li>
+<li>Amazon s3 is distributed cloud storage service provider, and s3 is available to every node on my Amazon Elastic MapReduce cluster</li>
+<li>That data is in a place that I can handle the size of it and can store redundantly</li>
+<li>So when we set up a Amazon Elastic MapReduce Cluster (Amazon EMR), it will come preconfigured to take the best advantage of the cluster it has</li>
+<li>When you navigate to the source folder SparkScala, you can navigate to the folder sbt, and there will be a build.sbt inside it</li>
+<li>Change the version inside build.sbt according to your setup</li>
+</ul>
+<pre><code>    name := &quot;MovieSimilarities1M&quot;
+
+    version := &quot;1.0&quot;
+
+    organization := &quot;com.sundogsoftware&quot;
+
+    scalaVersion := &quot;2.11.8&quot;
+
+    libraryDependencies ++= Seq(
+    &quot;org.apache.spark&quot; %% &quot;spark-core&quot; % &quot;2.3.0&quot; % &quot;provided&quot;
+    )
+</code></pre><ul>
+<li>If you navigate sbt/project folder, you will see a assembly.sbt inside it</li>
+</ul>
+<pre><code>    addSbtPlugin(&quot;com.eed3si9n&quot; % &quot;sbt-assembly&quot; % &quot;0.14.6&quot;)
+</code></pre><ul>
+<li>This SBT version may change depending on your SBT version</li>
+<li><p>This line will add access to the SBT assembly command that I can use to actually make my final jar file</p>
+</li>
+<li><p>The folder also contains a src/main/scala folder which contains MovieSimilarities1M.scala file inside it.</p>
+</li>
+<li>So to run SBT, open cmd and run as Administrator  in SparkScala source folder sbt folder<pre><code>  cd C:\Users\User\Desktop\Alvin Programming Files\Data Science Courses\Apache 2.0 Spark with Scala\SparkScala\sbt
+</code></pre></li>
+</ul>
+<pre><code>    dir
+</code></pre><ul>
+<li>dir is to see files under sbt directory</li>
+</ul>
+<pre><code>    sbt assembly
+</code></pre><ul>
+<li>This runs the SBT assembly command to build your JAR</li>
+</ul>
+<pre><code>    sbt about
+</code></pre><ul>
+<li>If you are unsure of your sbt version, please type sbt about in cmd main window to check your sbt version and input the correct version into assembly.sbt</li>
+<li>For my setup, my sbt version is 1.1.6</li>
+<li>So go to this page <a href="https://github.com/sbt/sbt-assembly" target="_blank">SBT Version reference for sbt-assembly</a> to change your assembly.sbt</li>
+<li><p>For sbt version 1.1.6, I would need to change the SbtPlugin to 0.14.6</p>
+<pre><code>  addSbtPlugin(&quot;com.eed3si9n&quot; % &quot;sbt-assembly&quot; % &quot;0.14.6&quot;)
+</code></pre></li>
+<li><p>After the operation runs, there should now be a target folder which contains a scala-2.10 folder (which I specified is my dependency) which contains MovieSimilarities1M-assembly-1.0.jar</p>
+</li>
+<li>So that is the actual JAR file that I acutally need to distribute to my cluster.</li>
+<li>And that is my Spark drivers script that I can run from a real cluster.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Section05-32.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 32. [Activity] Using spark-submit to run Spark driver scripts">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"33. [Activity] Packaging driver scripts with SBT","level":"6.2","depth":1,"previous":{"title":"32. [Activity] Using spark-submit to run Spark driver scripts","level":"6.1","depth":1,"path":"section-05/Section05-32.md","ref":"section-05/Section05-32.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-05/Section05-33.md","mtime":"2018-06-15T13:44:51.978Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-15T13:49:04.240Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
