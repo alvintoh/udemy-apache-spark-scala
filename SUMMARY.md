@@ -48,5 +48,11 @@
 * [31. [Exercise] Improve the Quality of Similiar Movies](section-04/Section04-31.md)
 
 ## Section 5: Running Spark on a Cluster
+
 * [32. [Activity] Using spark-submit to run Spark driver scripts](section-05/Section05-32.md)
 * [33. [Activity] Packaging driver scripts with SBT](section-05/Section05-33.md)
+* [34. Introducing Amazon Elastic MapReduce](section-05/Section05-34.md)
+* [35. Creating Similar Movies from One Million Ratings on EMR](section-05/Section05-35.md)
+* [36. Partitioning](section-05/Section05-36.md)
+* [37. Best Practices for Running on a Cluster](section-05/Section05-37.md)
+* [38. Troubleshooting, and Managing Dependencies](section-05/Section05-38.md)
