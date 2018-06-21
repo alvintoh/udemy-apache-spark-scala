@@ -56,3 +56,17 @@
 * [36. Partitioning](section-05/Section05-36.md)
 * [37. Best Practices for Running on a Cluster](section-05/Section05-37.md)
 * [38. Troubleshooting, and Managing Dependencies](section-05/Section05-38.md)
+
+## Section 6: SparkSQL, DataFrames, and DataSets
+
+* [39. Introduction to SparkSQL](section-06/Section06-39.md)
+* [40. [Activity] Using SparkSQL](section-06/Section06-40.md)
+* [41. [Activity] Using DataFrames and DataSets](section-06/Section06-41.md)
+* [42. [Activity] Using DataSets instead of RDD's](section-06/Section06-42.md)
+
+## Section 7: Machine Learning with MLLib
+
+* [43. Introducing MLLib](section-07/Section07-43.md)
+* [44. [Activity] Using MLLib to Produce Movie Recommendations](section-07/Section07-44.md)
+* [45. [Activity] Using DataFrames with MLLib](section-07/Section07-45.md)
+* [46. [Activity] Using DataFrames with MLLib](section-07/Section07-46.md)
