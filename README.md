@@ -31,5 +31,13 @@ This repository represents my notes on getting started with this course, with de
 To get started, this is the **[Udemy course](https://www.udemy.com/apache-spark-with-scala-hands-on-with-big-data/learn/v4/overview)**. You will need to buy the Udemy course to get access to the full content and exercises.
 
 ## Features
+* Frame big data analysis problems as Apache Spark scripts
+* Develop distributed code using the Scala programming language
+* Optimize Spark jobs through partitioning, caching, and other techniques
+* Build, deploy, and run Spark scripts on Hadoop clusters
+* Process continual streams of data with Spark Streaming
+* Transform structured data using SparkSQL and DataFrames
+* Traverse and analyze graph structures using GraphX
 
 ## Issues and Problems
+* Mainly version issues, but I have included my solution in the respective section walkthrough.

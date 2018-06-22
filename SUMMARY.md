@@ -70,3 +70,19 @@
 * [44. [Activity] Using MLLib to Produce Movie Recommendations](section-07/Section07-44.md)
 * [45. [Activity] Using DataFrames with MLLib](section-07/Section07-45.md)
 * [46. [Activity] Using DataFrames with MLLib](section-07/Section07-46.md)
+
+## Section 8: Intro to Spark Streaming
+
+* [47. Spark Streaming Overview](section-08/Section08-47.md)
+* [48. [Activity] Set up a Twitter Developer Account, and Stream Tweets](section-08/Section08-48.md)
+* [49. Structured Streaming](section-08/Section08-49.md)
+
+## Section 9: Intro to GraphX
+
+* [50. GraphX, Pregel, and Breadth-First-Search with Pregel.](section-09/Section09-50.md)
+* [51. [Activity] Superhero Degrees of Seperation using GraphX](section-09/Section09-51.md)
+
+## Section 10: You Made It! Where to Go from Here.
+
+* [52. Learning More, and Career Tips](section-10/Section10-52.md)
+* [53. Bonus Lecture: Discounts on my other "Big Data" / Data Science Courses.](section-10/Section10-53.md)

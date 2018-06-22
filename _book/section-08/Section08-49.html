@@ -1,0 +1,1005 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>49. Structured Streaming · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../section-09/Section09-50.html" />
+    
+    
+    <link rel="prev" href="Section08-48.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 1: Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../section-01/Section01-01.html">
+            
+                <a href="../section-01/Section01-01.html">
+            
+                    
+                    1. Warning about Java 9 and Spark2.3!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../section-01/Section01-02.html">
+            
+                <a href="../section-01/Section01-02.html">
+            
+                    
+                    2. Introduction, and Getting Set Up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Section-01/Section01-03.html">
+            
+                <a href="../Section-01/Section01-03.html">
+            
+                    
+                    3. [Activity] Create a Histogram of Real Movie Ratings with Spark!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 2: Scala Crash Course</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../section-02/Section02-04.html">
+            
+                <a href="../section-02/Section02-04.html">
+            
+                    
+                    4. [Activity] Scala Basics, Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../section-02/Section02-05.html">
+            
+                <a href="../section-02/Section02-05.html">
+            
+                    
+                    5. [Exercise] Scala Basics, Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../section-02/Section02-06.html">
+            
+                <a href="../section-02/Section02-06.html">
+            
+                    
+                    6. [Exercise] Flow Control in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../section-02/Section02-07.html">
+            
+                <a href="../section-02/Section02-07.html">
+            
+                    
+                    7. [Exercise] Functions in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../section-02/Section02-08.html">
+            
+                <a href="../section-02/Section02-08.html">
+            
+                    
+                    8. [Exercise] Data Structures in Scala
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 3: Spark Basics and Simple Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../section-03/Section03-09.html">
+            
+                <a href="../section-03/Section03-09.html">
+            
+                    
+                    9. Introduction to Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../section-03/Section03-10.html">
+            
+                <a href="../section-03/Section03-10.html">
+            
+                    
+                    10. Introducing RDD's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../section-03/Section03-11.html">
+            
+                <a href="../section-03/Section03-11.html">
+            
+                    
+                    11. Ratings Histogram Walkthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../section-03/Section03-12.html">
+            
+                <a href="../section-03/Section03-12.html">
+            
+                    
+                    12. Spark Internals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../section-03/Section03-13.html">
+            
+                <a href="../section-03/Section03-13.html">
+            
+                    
+                    13. Key /Value RDD's, and the Average Friends by Age example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../section-03/Section03-14.html">
+            
+                <a href="../section-03/Section03-14.html">
+            
+                    
+                    14. [Activity] Running the Average Friends by Age Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../section-03/Section03-15.html">
+            
+                <a href="../section-03/Section03-15.html">
+            
+                    
+                    15. Filtering RDD's, and the Minimum Temperature by Location Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../section-03/Section03-16.html">
+            
+                <a href="../section-03/Section03-16.html">
+            
+                    
+                    16. [Activity] Running the Minimum Temperature Example, and Modifying it for Maximum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../section-03/Section03-17.html">
+            
+                <a href="../section-03/Section03-17.html">
+            
+                    
+                    17. [Activity] Counting Word Occurences using Flatmap()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../section-03/Section03-18.html">
+            
+                <a href="../section-03/Section03-18.html">
+            
+                    
+                    18. [Activity] Improving the Word Count Script with Regular Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../section-03/Section03-19.html">
+            
+                <a href="../section-03/Section03-19.html">
+            
+                    
+                    19. [Activity] Sorting the Word Count Results
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../section-03/Section03-20.html">
+            
+                <a href="../section-03/Section03-20.html">
+            
+                    
+                    20. [Exercise] Find the Total Amount Spent by Customer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="../section-03/Section03-21.html">
+            
+                <a href="../section-03/Section03-21.html">
+            
+                    
+                    21. [Exercise] Check your Results, and Sort Them by Total Amount Spent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.14" data-path="../section-03/Section03-22.html">
+            
+                <a href="../section-03/Section03-22.html">
+            
+                    
+                    22. Check Your Results and Implementation Against Mine
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 4: Advanced Examples of Spark Programs</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../section-04/Section04-23.html">
+            
+                <a href="../section-04/Section04-23.html">
+            
+                    
+                    23. [Activity] Find the Most Popular Movie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../section-04/Section04-24.html">
+            
+                <a href="../section-04/Section04-24.html">
+            
+                    
+                    24. [Activity] Use Broadcast Variables to Display Movie Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../section-04/Section04-25.html">
+            
+                <a href="../section-04/Section04-25.html">
+            
+                    
+                    25. [Activity] Find the Most Popular Superhero in a Social Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../section-04/Section04-26.html">
+            
+                <a href="../section-04/Section04-26.html">
+            
+                    
+                    26. Superhero Degrees of Seperation: Introducing Breadth-First Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../section-04/Section04-27.html">
+            
+                <a href="../section-04/Section04-27.html">
+            
+                    
+                    27. Superhero Degrees of Seperation: Accumulators, and Implementing BFS in Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../section-04/Section04-28.html">
+            
+                <a href="../section-04/Section04-28.html">
+            
+                    
+                    28. Superhero Degrees of Seperation: Review the code, and run it!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="../section-04/Section04-29.html">
+            
+                <a href="../section-04/Section04-29.html">
+            
+                    
+                    29. Item-Based Collaborative Filtering in Spark, cache(), and persist()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="../section-04/Section04-30.html">
+            
+                <a href="../section-04/Section04-30.html">
+            
+                    
+                    30. [Activity] Running the Similiar Movies Script using Spark's Cluster Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="../section-04/Section04-31.html">
+            
+                <a href="../section-04/Section04-31.html">
+            
+                    
+                    31. [Exercise] Improve the Quality of Similiar Movies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 5: Running Spark on a Cluster</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../section-05/Section05-32.html">
+            
+                <a href="../section-05/Section05-32.html">
+            
+                    
+                    32. [Activity] Using spark-submit to run Spark driver scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../section-05/Section05-33.html">
+            
+                <a href="../section-05/Section05-33.html">
+            
+                    
+                    33. [Activity] Packaging driver scripts with SBT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../section-05/Section05-34.html">
+            
+                <a href="../section-05/Section05-34.html">
+            
+                    
+                    34. Introducing Amazon Elastic MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../section-05/Section05-35.html">
+            
+                <a href="../section-05/Section05-35.html">
+            
+                    
+                    35. Creating Similar Movies from One Million Ratings on EMR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../section-05/Section05-36.html">
+            
+                <a href="../section-05/Section05-36.html">
+            
+                    
+                    36. Partitioning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../section-05/Section05-37.html">
+            
+                <a href="../section-05/Section05-37.html">
+            
+                    
+                    37. Best Practices for Running on a Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../section-05/Section05-38.html">
+            
+                <a href="../section-05/Section05-38.html">
+            
+                    
+                    38. Troubleshooting, and Managing Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 6: SparkSQL, DataFrames, and DataSets</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../section-06/Section06-39.html">
+            
+                <a href="../section-06/Section06-39.html">
+            
+                    
+                    39. Introduction to SparkSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../section-06/Section06-40.html">
+            
+                <a href="../section-06/Section06-40.html">
+            
+                    
+                    40. [Activity] Using SparkSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../section-06/Section06-41.html">
+            
+                <a href="../section-06/Section06-41.html">
+            
+                    
+                    41. [Activity] Using DataFrames and DataSets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../section-06/Section06-42.html">
+            
+                <a href="../section-06/Section06-42.html">
+            
+                    
+                    42. [Activity] Using DataSets instead of RDD's
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 7: Machine Learning with MLLib</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../section-07/Section07-43.html">
+            
+                <a href="../section-07/Section07-43.html">
+            
+                    
+                    43. Introducing MLLib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../section-07/Section07-44.html">
+            
+                <a href="../section-07/Section07-44.html">
+            
+                    
+                    44. [Activity] Using MLLib to Produce Movie Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../section-07/Section07-45.html">
+            
+                <a href="../section-07/Section07-45.html">
+            
+                    
+                    45. [Activity] Using DataFrames with MLLib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../section-07/Section07-46.html">
+            
+                <a href="../section-07/Section07-46.html">
+            
+                    
+                    46. [Activity] Using DataFrames with MLLib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 8: Intro to Spark Streaming</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Section08-47.html">
+            
+                <a href="Section08-47.html">
+            
+                    
+                    47. Spark Streaming Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Section08-48.html">
+            
+                <a href="Section08-48.html">
+            
+                    
+                    48. [Activity] Set up a Twitter Developer Account, and Stream Tweets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.3" data-path="Section08-49.html">
+            
+                <a href="Section08-49.html">
+            
+                    
+                    49. Structured Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 9: Intro to GraphX</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../section-09/Section09-50.html">
+            
+                <a href="../section-09/Section09-50.html">
+            
+                    
+                    50. GraphX, Pregel, and Breadth-First-Search with Pregel.
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../section-09/Section09-51.html">
+            
+                <a href="../section-09/Section09-51.html">
+            
+                    
+                    51. [Activity] Superhero Degrees of Seperation using GraphX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Section 10: You Made It! Where to Go from Here.</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../section-10/Section10-52.html">
+            
+                <a href="../section-10/Section10-52.html">
+            
+                    
+                    52. Learning More, and Career Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../section-10/Section10-53.html">
+            
+                <a href="../section-10/Section10-53.html">
+            
+                    
+                    53. Bonus Lecture: Discounts on my other "Big Data" / Data Science Courses.
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >49. Structured Streaming</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="49-structured-streaming">49. Structured Streaming</h1>
+<h2 id="streaming-with-datasets">STREAMING WITH DATASETS</h2>
+<p>Structured Streaming in Spark 2.0</p>
+<h3 id="structured-streaming">Structured Streaming</h3>
+<ul>
+<li>Spark 2.0.0 introduced &quot;structured streaming&quot; as an experimental feature.</li>
+<li>Uses DataSets as its primary API (much of Spark is going this way)</li>
+<li>Imagine a DataSet that just keeps getting appended to forever, and you query it whenever you want.<pre><code>  val inputDF = spark.readStream.json(&quot;s3://logs&quot;)
+  inputDF.groupBy($&quot;action&quot;, window($&quot;time&quot;, &quot;1 hour&quot;)).count().writeStream.format(&quot;jdbc&quot;).start(&quot;jdbc:mysql//...&quot;)
+</code></pre></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Section08-48.html" class="navigation navigation-prev " aria-label="Previous page: 48. [Activity] Set up a Twitter Developer Account, and Stream Tweets">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../section-09/Section09-50.html" class="navigation navigation-next " aria-label="Next page: 50. GraphX, Pregel, and Breadth-First-Search with Pregel.">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"49. Structured Streaming","level":"9.3","depth":1,"next":{"title":"50. GraphX, Pregel, and Breadth-First-Search with Pregel.","level":"10.1","depth":1,"path":"section-09/Section09-50.md","ref":"section-09/Section09-50.md","articles":[]},"previous":{"title":"48. [Activity] Set up a Twitter Developer Account, and Stream Tweets","level":"9.2","depth":1,"path":"section-08/Section08-48.md","ref":"section-08/Section08-48.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-08/Section08-49.md","mtime":"2018-06-22T12:35:09.469Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-22T15:17:01.720Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
