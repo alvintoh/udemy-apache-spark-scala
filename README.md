@@ -28,7 +28,7 @@ By the end of this course, you'll be running code that analyzes gigabytes worth 
 
 This repository represents my notes on getting started with this course, with detailed instructions and walkthrough on Gitbook in starting the various exercises.
 
-To get started, this is the **[Udemy course](https://www.udemy.com/apache-spark-with-scala-hands-on-with-big-data/learn/v4/overview)**. You will need to buy the Udemy course to get access to the full content and exercises.
+To get started, this is the **[Udemy course](https://www.udemy.com/apache-spark-with-scala-hands-on-with-big-data/)**. You will need to buy the Udemy course to get access to the full content and exercises.
 
 ## Features
 * Frame big data analysis problems as Apache Spark scripts
